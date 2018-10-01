@@ -5,68 +5,58 @@ import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import Section from '../components/Section'
 
-export const AboutPageTemplate = ({
-  title,
-  content,
-  image,
-  contentComponent,
-}) => {
-  const PageContent = contentComponent || Content
-
+export const PhotoTemplate = ({ title, description, image }) => {
   return (
     <Section>
       <h3 className="f3">{title}</h3>
-      <div className="flex flex-column-reverse flex-row-l">
+      <div className="flex flex-column-reverse">
         <div className="w-100 w-50-l pr4-l">
           <div>
-            <PageContent content={content} />
+            <Content content={description} />
           </div>
         </div>
-        <div className="w-100 w-50-l">
-          <p>
-            <img className="w-100" src={image} />
-          </p>
+        <div className="w-100">
+          <img className="w-100" src={image} />
         </div>
       </div>
     </Section>
   )
 }
 
-AboutPageTemplate.propTypes = {
+PhotoTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  content: PropTypes.string,
-  contentComponent: PropTypes.func,
+  description: PropTypes.string,
 }
 
-const AboutPage = ({ data }) => {
+const Photo = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
     <Layout>
-      <AboutPageTemplate
-        contentComponent={HTMLContent}
+      <PhotoTemplate
         title={post.frontmatter.title}
         image={post.frontmatter.image}
-        content={post.html}
+        content={post.frontmatter.description}
       />
     </Layout>
   )
 }
 
-AboutPage.propTypes = {
+Photo.propTypes = {
   data: PropTypes.object.isRequired,
 }
 
-export default AboutPage
+export default Photo
 
-export const aboutPageQuery = graphql`
-  query AboutPage($id: String!) {
+export const photoQuery = graphql`
+  query featuredPhoto($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
         title
         image
+        description
       }
     }
   }

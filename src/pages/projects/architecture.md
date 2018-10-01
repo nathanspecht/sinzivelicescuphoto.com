@@ -1,0 +1,4 @@
+---
+templateKey: project
+title: Architecture
+---

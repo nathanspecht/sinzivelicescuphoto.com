@@ -1,12 +1,13 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+import 'tachyons/css/tachyons.min.css'
+import './all.css'
 
 import Navbar from '../components/Navbar'
-import './all.sass'
 
 const TemplateWrapper = ({ children }) => (
-  <div>
-    <Helmet title="Home | Gatsby + Netlify CMS" />
+  <div className="mw9 center">
+    <Helmet title="Sinziana Velicescu Photography" />
     <Navbar />
     <div>{children}</div>
   </div>

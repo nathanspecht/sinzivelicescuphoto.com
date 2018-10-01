@@ -1,10 +1,9 @@
 {
   "name": "gatsby-starter-netlify-cms",
-  "description": "Example Gatsby, and Netlify CMS project",
-  "version": "1.1.3",
-  "author": "Austin Green",
+  "description": "Sinzi Velicescu Photography",
+  "version": "0.0.1",
+  "author": "Nathan Specht",
   "dependencies": {
-    "bulma": "^0.7.0",
     "gatsby": "^2.0.0",
     "gatsby-plugin-netlify": "^2.0.0",
     "gatsby-plugin-netlify-cms": "^3.0.0",
@@ -24,6 +23,8 @@
     "react": "^16.2.0",
     "react-dom": "^16.4.1",
     "react-helmet": "^5.2.0",
+    "react-transition-group": "^2.5.0",
+    "tachyons": "4.10.0",
     "uuid": "^3.2.1"
   },
   "keywords": [
