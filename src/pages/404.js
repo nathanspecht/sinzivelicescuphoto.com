@@ -1,14 +1,15 @@
 import React from 'react'
 import Layout from '../components/Layout'
+import Section from '../components/Section'
+import Title from '../components/Title'
 
 const NotFoundPage = ({ data }) => {
   const projects = data.projects
   return (
     <Layout projects={data.projects}>
-      <div>
-        <h1>NOT FOUND</h1>
-        <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-      </div>
+      <Section>
+        <Title>404</Title>
+      </Section>
     </Layout>
   )
 }
