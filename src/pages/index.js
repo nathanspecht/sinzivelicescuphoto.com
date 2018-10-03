@@ -49,7 +49,6 @@ export const pageQuery = graphql`
     }
 
     allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] }
       filter: { frontmatter: { templateKey: { eq: "photo" } } }
     ) {
       edges {
@@ -62,7 +61,6 @@ export const pageQuery = graphql`
             title
             description
             image
-            date(formatString: "MMMM DD, YYYY")
           }
         }
       }

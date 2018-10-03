@@ -41,7 +41,6 @@ export const projectQuery = graphql`
       id
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
         title
         description
         photos {
