@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Link from '../components/Link'
-import Layout from '../components/Layout'
+import Layout, { projectsFragment } from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
 export const ProjectsPageTemplate = ({
@@ -67,14 +67,7 @@ export const projectsPageQuery = graphql`
     ) {
       edges {
         node {
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            templateKey
-          }
+          ...ProjectFragment
         }
       }
     }

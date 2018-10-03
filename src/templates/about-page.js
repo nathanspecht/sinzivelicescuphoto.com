@@ -1,9 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
+import Layout, { projectsFragment } from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import Section from '../components/Section'
+import Title from '../components/Title'
 
 export const AboutPageTemplate = ({
   title,
@@ -15,14 +16,14 @@ export const AboutPageTemplate = ({
 
   return (
     <Section>
-      <h3 className="f3">{title}</h3>
-      <div className="flex flex-column-reverse flex-row-l">
-        <div className="w-100 w-50-l pr4-l">
+      <Title>{title}</Title>
+      <div className="flex flex-column-reverse flex-row-ns">
+        <div className="w-50-ns pr4-ns">
           <div>
             <PageContent content={content} />
           </div>
         </div>
-        <div className="w-100 w-50-l">
+        <div className="w-50-ns">
           <p>
             <img className="w-100" src={image} />
           </p>
@@ -40,10 +41,10 @@ AboutPageTemplate.propTypes = {
 }
 
 const AboutPage = ({ data }) => {
-  const { markdownRemark: post } = data
+  const { projects, markdownRemark: post } = data
 
   return (
-    <Layout>
+    <Layout projects={projects}>
       <AboutPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
@@ -62,6 +63,16 @@ export default AboutPage
 
 export const aboutPageQuery = graphql`
   query AboutPage($id: String!) {
+    projects: allMarkdownRemark(
+      filter: { frontmatter: { templateKey: { eq: "project" } } }
+    ) {
+      edges {
+        node {
+          ...ProjectFragment
+        }
+      }
+    }
+
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {

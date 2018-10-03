@@ -23,13 +23,13 @@ class Slides extends React.Component {
 
   render() {
     const { photos } = this.props
-    const { node: photo } = photos[this.state.index]
+    const { photo } = photos[this.state.index]
 
     return (
       <div className="relative w-100">
         <TransitionGroup>
           <CSSTransition key={photo.id} timeout={100} classNames="fade">
-            <img className="db center" src={photo.frontmatter.image} />
+            <img className="db center" src={photo.src} />
           </CSSTransition>
         </TransitionGroup>
         <div

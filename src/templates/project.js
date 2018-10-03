@@ -1,15 +1,23 @@
 import React from 'react'
-import Layout from '../components/Layout'
+import Layout, { projectsFragment } from '../components/Layout'
 import Section from '../components/Section'
+import Slides from '../components/Slides'
 
 const Project = ({ data }) => {
-  const { markdownRemark: project } = data
-  const title = project.frontmatter.title
+  const { projects, markdownRemark: project } = data
+  let { photos } = project.frontmatter
+
+  photos = photos.map(photo => ({
+    photo: {
+      id: photo.photo,
+      src: photo.photo,
+    },
+  }))
 
   return (
-    <Layout>
-      <Section>
-        <h3 className="f3">{title}</h3>
+    <Layout projects={projects}>
+      <Section className="mt4">
+        <Slides photos={photos} />
       </Section>
     </Layout>
   )
@@ -19,6 +27,16 @@ export default Project
 
 export const projectQuery = graphql`
   query ProjectById($id: String!) {
+    projects: allMarkdownRemark(
+      filter: { frontmatter: { templateKey: { eq: "project" } } }
+    ) {
+      edges {
+        node {
+          ...ProjectFragment
+        }
+      }
+    }
+
     markdownRemark(id: { eq: $id }) {
       id
       html
@@ -26,6 +44,9 @@ export const projectQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         description
+        photos {
+          photo
+        }
       }
     }
   }

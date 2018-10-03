@@ -44,3 +44,12 @@ html, body {
   opacity: 0.01;
   transition: opacity 100ms ease-in;
 }
+
+.active-underline {
+  border-bottom: 1px solid black !important;
+}
+
+.inactive-underline {
+  border-bottom: 1px solid transparent;
+  transition: border 500ms ease;
+}

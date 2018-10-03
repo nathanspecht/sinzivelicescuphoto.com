@@ -5,12 +5,24 @@ import './all.css'
 
 import Navbar from '../components/Navbar'
 
-const TemplateWrapper = ({ children }) => (
-  <div className="mw9 center">
+const TemplateWrapper = ({ projects, children }) => (
+  <div className="mw8 center">
     <Helmet title="Sinziana Velicescu Photography" />
-    <Navbar />
-    <div>{children}</div>
+    <Navbar projects={projects} />
+    <div className="f6">{children}</div>
   </div>
 )
+
+export const projectsFragment = graphql`
+  fragment ProjectFragment on MarkdownRemark {
+    id
+    fields {
+      slug
+    }
+    frontmatter {
+      title
+    }
+  }
+`
 
 export default TemplateWrapper

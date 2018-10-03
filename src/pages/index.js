@@ -1,17 +1,25 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
-import Layout from '../components/Layout'
+import Layout, { projectsFragment } from '../components/Layout'
 import Section from '../components/Section'
 import Slides from '../components/Slides'
 
 export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props
-    const { edges: photos } = data.allMarkdownRemark
+    let { edges: photos } = data.allMarkdownRemark
+    const projects = data.projects
+
+    photos = photos.map(({ node: photo }) => ({
+      photo: {
+        id: photo.id,
+        src: photo.frontmatter.image,
+      },
+    }))
 
     return (
-      <Layout>
+      <Layout projects={projects}>
         <Section className="mt4">
           <Slides photos={photos} />
         </Section>
@@ -30,6 +38,16 @@ IndexPage.propTypes = {
 
 export const pageQuery = graphql`
   query IndexQuery {
+    projects: allMarkdownRemark(
+      filter: { frontmatter: { templateKey: { eq: "project" } } }
+    ) {
+      edges {
+        node {
+          ...ProjectFragment
+        }
+      }
+    }
+
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: { frontmatter: { templateKey: { eq: "photo" } } }

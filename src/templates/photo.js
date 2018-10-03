@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
+import Layout, { projectsFragment } from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import Section from '../components/Section'
 
@@ -30,10 +30,10 @@ PhotoTemplate.propTypes = {
 }
 
 const Photo = ({ data }) => {
-  const { markdownRemark: post } = data
+  const { projects, markdownRemark: post } = data
 
   return (
-    <Layout>
+    <Layout projects={projects}>
       <PhotoTemplate
         title={post.frontmatter.title}
         image={post.frontmatter.image}
@@ -51,6 +51,16 @@ export default Photo
 
 export const photoQuery = graphql`
   query featuredPhoto($id: String!) {
+    projects: allMarkdownRemark(
+      filter: { frontmatter: { templateKey: { eq: "project" } } }
+    ) {
+      edges {
+        node {
+          ...ProjectFragment
+        }
+      }
+    }
+
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
