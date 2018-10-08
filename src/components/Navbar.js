@@ -7,7 +7,7 @@ import tumblr from '../img/tumblr-icon.svg'
 const Navbar = ({ projects }) => (
   <nav className="flex pv3 ph2 ph3-ns ph4-l justify-between items-center">
     <div>
-      <Link className="b f3" to="/">
+      <Link className="b f3 archivo-black" to="/" activeClassName="">
         SINZIANA VELICESCU
       </Link>
     </div>
@@ -17,7 +17,7 @@ const Navbar = ({ projects }) => (
           {project.frontmatter.title}
         </Link>
       ))}
-      <Link className="mr3" to="/about">
+      <Link className="mr4" to="/about">
         About
       </Link>
       <Link to="/" className="mr3" activeClassName="">

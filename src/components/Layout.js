@@ -6,7 +6,7 @@ import './all.css'
 import Navbar from '../components/Navbar'
 
 const TemplateWrapper = ({ projects, children }) => (
-  <div className="mw8 center">
+  <div className="mw9 center">
     <Helmet title="Sinziana Velicescu Photography" />
     <Navbar projects={projects} />
     <div className="f6">{children}</div>
