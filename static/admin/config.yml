@@ -49,7 +49,6 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "project"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Featured", name: "featured", widget: "boolean", default: false}
       - label: "Images"
         name: "images"
         widget: "image"

@@ -68,8 +68,10 @@ html, body {
   transition: opacity 100ms ease-in;
 }
 
-.active-underline {
-  border-bottom: 1px solid black !important;
+@media screen and (min-width: 60em) {
+  .active-underline {
+    border-bottom: 1px solid black !important;
+  }
 }
 
 .inactive-underline {
@@ -79,4 +81,22 @@ html, body {
 
 .right-100 {
   right: 100%;
+}
+
+.nav-container {
+  transform: translateX(100%);
+}
+
+.nav-container.open {
+  transform: translateX(0);
+}
+
+@media screen and (min-width: 60em) {
+  .nav-container {
+    transform: translateX(0);
+  }
+}
+
+.transition-trans {
+  transition: transform 0.5s ease;
 }
