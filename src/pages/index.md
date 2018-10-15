@@ -1,4 +1,4 @@
 ---
 templateKey: index
-featuredProject: Architecture!!
+featuredProject: On the Periphery
 ---
