@@ -2,4 +2,3 @@
 templateKey: index
 featuredProject: Architecture!!
 ---
-

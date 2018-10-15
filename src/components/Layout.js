@@ -21,6 +21,7 @@ export const projectsFragment = graphql`
     }
     frontmatter {
       title
+      images
     }
   }
 `
