@@ -1,4 +1,5 @@
 ---
-  templateKey: index
-  title: HOME
+templateKey: index
+featuredProject: Architecture!!
 ---
+
