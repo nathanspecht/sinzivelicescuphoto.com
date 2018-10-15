@@ -2,6 +2,11 @@ backend:
   name: git-gateway
   branch: master
 
+media_library:
+  name: uploadcare
+  config:
+    publicKey: 8c2097816b0c71e124aa
+
 media_folder: static/img
 public_folder: /img
 
@@ -15,8 +20,15 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Image", name: "image", widget: "image"}
           - {label: "Body", name: "body", widget: "markdown"}
+          - label: "Image"
+            name: "image"
+            widget: "image"
+            options:
+              media_library:
+                config:
+                  multiple: false
+                  previewStep: true
   - name: "projects"
     label: "Projects"
     folder: "src/pages/projects"
@@ -25,5 +37,11 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "project"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Photos", name: "photos", widget: "list", field: {label: "Photo", name: "photo", widget: "image"}}
-
+      - label: "Images"
+        name: "images"
+        widget: "image"
+        options:
+          media_library:
+            config:
+              multiple: true
+              previewStep: true

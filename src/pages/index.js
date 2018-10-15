@@ -8,21 +8,21 @@ import Slides from '../components/Slides'
 export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props
-    let { edges: photos } = data.allMarkdownRemark
+    // let { edges: photos } = data.allMarkdownRemark
     const projects = data.projects
 
+    /*
     photos = photos.map(({ node: photo }) => ({
       photo: {
         id: photo.id,
         src: photo.frontmatter.image,
       },
     }))
+    */
 
     return (
       <Layout projects={projects}>
-        <Section className="mt4">
-          <Slides photos={photos} />
-        </Section>
+        <Section className="mt4">{/*<Slides photos={photos} />*/}</Section>
       </Layout>
     )
   }
@@ -59,8 +59,6 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
-            description
-            image
           }
         }
       }

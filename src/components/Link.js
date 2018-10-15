@@ -3,8 +3,10 @@ import { Link } from 'gatsby'
 
 export default ({ className, ...props }) => (
   <Link
-    activeClassName="active-underline"
-    className={`link dim black ${className} pb1 inactive-underline`}
+    activeClassName={props.noUnderline ? '' : 'active-underline'}
+    className={`link dim black ${
+      props.noUnderline ? 'pb0' : 'pb1'
+    } inactive-underline ${className}`}
     {...props}
   />
 )

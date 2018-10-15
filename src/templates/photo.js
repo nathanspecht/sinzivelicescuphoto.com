@@ -5,6 +5,7 @@ import Layout, { projectsFragment } from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import Section from '../components/Section'
 
+/*
 export const PhotoTemplate = ({ title, description, image }) => {
   return (
     <Section>
@@ -28,17 +29,20 @@ PhotoTemplate.propTypes = {
   image: PropTypes.string.isRequired,
   description: PropTypes.string,
 }
+*/
 
 const Photo = ({ data }) => {
   const { projects, markdownRemark: post } = data
 
   return (
     <Layout projects={projects}>
+      {/*
       <PhotoTemplate
         title={post.frontmatter.title}
         image={post.frontmatter.image}
         content={post.frontmatter.description}
       />
+ */}
     </Layout>
   )
 }
@@ -65,8 +69,6 @@ export const photoQuery = graphql`
       html
       frontmatter {
         title
-        image
-        description
       }
     }
   }

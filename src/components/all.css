@@ -1,41 +1,28 @@
 @font-face {
-  font-family: "Lovelo";
-  src: url('../fonts/Lovelo-Black.otf');
+  font-family: "Futura Regular";
+  src: url('../fonts/FuturaRegular.otf');
+}
+@font-face {
+  font-family: "Futura Bold";
+  src: url('../fonts/FuturaBold.otf');
 }
 
 @font-face {
-  font-family: "Archivo Black";
-  src: url('../fonts/ArchivoBlack-Regular.ttf');
+  font-family: "Graphik Regular";
+  src: url('../fonts/GraphikRegular.otf');
 }
 
-@font-face {
-  font-family: "Roboto";
-  font-weight: normal;
-  src: url('../fonts/Roboto-Regular.ttf');
-}
-
-@font-face {
-  font-family: "Roboto";
-  font-weight: bold;
-  src: url('../fonts/Roboto-Bold.ttf');
-}
-
-.roboto {
-  font-family: 'Roboto';
-}
-
-.lovelo {
-  font-family: 'Lovelo';
+.futura-regular {
+  font-family: 'Futura Regular';
   letter-spacing: 3px;
 }
-
-.archivo-black {
-  font-family: 'Archivo Black';
+.futura-bold {
+  font-family: 'Futura Bold';
   letter-spacing: 3px;
 }
 
 html, body {
-  font-family: -apple-system, BlinkMacSystemFont,
+  font-family: "Graphik Regular", -apple-system, BlinkMacSystemFont,
     "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif;
@@ -88,4 +75,8 @@ html, body {
 .inactive-underline {
   border-bottom: 1px solid transparent;
   transition: border 500ms ease;
+}
+
+.right-100 {
+  right: 100%;
 }

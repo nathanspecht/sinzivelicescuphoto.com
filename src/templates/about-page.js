@@ -17,13 +17,13 @@ export const AboutPageTemplate = ({
   return (
     <Section className="mw8">
       <Title>{title}</Title>
-      <div className="flex flex-column-reverse flex-row-ns">
-        <div className="w-50-ns pr4-ns">
+      <div className="flex flex-column flex-row-l pv5">
+        <div className="w-50-l pr4-l">
           <div>
             <PageContent content={content} />
           </div>
         </div>
-        <div className="w-50-ns">
+        <div className="w-50-l">
           <p>
             <img className="w-100" src={image} />
           </p>

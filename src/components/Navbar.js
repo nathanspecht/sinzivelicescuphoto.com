@@ -5,13 +5,21 @@ import instagram from '../img/instagram-icon.svg'
 import tumblr from '../img/tumblr-icon.svg'
 
 const Navbar = ({ projects }) => (
-  <nav className="flex pv3 ph2 ph3-ns ph4-l justify-between items-center">
+  <nav className="flex pv3 ph2 ph4-ns ph5-l justify-between items-center">
     <div>
-      <Link className="b f3 archivo-black" to="/" activeClassName="">
+      <Link className="b f3 futura-bold" to="/" noUnderline>
         SINZIANA VELICESCU
       </Link>
     </div>
-    <div className="flex">
+    <div
+      className={`
+      flex flex-column flex-row-l
+      absolute relative-l top-0
+      z-1 bg-white
+      w-100 h-100 w-auto-l h-auto-l
+      pa4 pa0-l
+    `}
+    >
       {projects.edges.map(({ node: project }) => (
         <Link key={project.id} className="mr3" to={project.fields.slug}>
           {project.frontmatter.title}

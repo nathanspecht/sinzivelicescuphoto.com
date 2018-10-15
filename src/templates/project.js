@@ -4,7 +4,9 @@ import Section from '../components/Section'
 import Slides from '../components/Slides'
 
 const Project = ({ data }) => {
+  console.log({ data })
   const { projects, markdownRemark: project } = data
+  /*
   let { photos } = project.frontmatter
 
   photos = photos.map(photo => ({
@@ -13,12 +15,11 @@ const Project = ({ data }) => {
       src: photo.photo,
     },
   }))
+  */
 
   return (
     <Layout projects={projects}>
-      <Section className="mt4">
-        <Slides photos={photos} />
-      </Section>
+      <Section className="mt4">{/*<Slides photos={photos} />*/}</Section>
     </Layout>
   )
 }
@@ -42,10 +43,7 @@ export const projectQuery = graphql`
       html
       frontmatter {
         title
-        description
-        photos {
-          photo
-        }
+        image
       }
     }
   }
