@@ -9,27 +9,27 @@ class Slides extends React.Component {
 
   next = () => {
     this.setState({
-      index: (this.state.index + 1) % this.props.photos.length,
+      index: (this.state.index + 1) % this.props.images.length,
     })
   }
 
   prev = () => {
     this.setState({
       index:
-        (this.state.index - 1 + this.props.photos.length) %
-        this.props.photos.length,
+        (this.state.index - 1 + this.props.images.length) %
+        this.props.images.length,
     })
   }
 
   render() {
-    const { photos } = this.props
-    const { photo } = photos[this.state.index]
+    const { images } = this.props
+    const image = images[this.state.index]
 
     return (
       <div className="relative w-100">
         <TransitionGroup>
-          <CSSTransition key={photo.id} timeout={100} classNames="fade">
-            <img className="db center" src={photo.src} />
+          <CSSTransition key={image} timeout={100} classNames="fade">
+            <img className="db center" src={image} />
           </CSSTransition>
         </TransitionGroup>
         <div

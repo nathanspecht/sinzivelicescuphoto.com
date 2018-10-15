@@ -14,6 +14,18 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
+      - file: "src/pages/index.md"
+        label: "Home"
+        name: "home"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index"}
+          - label: "Featured Project"
+            name: "featuredProject"
+            widget: "relation"
+            collection: "projects"
+            searchFields: ["title"]
+            valueField: "title"
+            displayField: ["title"]
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
@@ -30,13 +42,14 @@ collections:
                   multiple: false
                   previewStep: true
   - name: "projects"
-    label: "Projects"
+    label: "Project"
     folder: "src/pages/projects"
     create: true
     slug: "{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "project"}
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Featured", name: "featured", widget: "boolean", default: false}
       - label: "Images"
         name: "images"
         widget: "image"
