@@ -36,7 +36,7 @@ class Navbar extends React.Component {
                 </Link>
               </div>
               <div
-                className="absolute ma3 pv1 ph2 top-0 right-0 z-2 db dn-l pointer"
+                className="absolute pv1 ph2 ph4-ns top-0 right-0 z-2 db dn-l pointer"
                 onClick={this.toggle}
               >
                 <img src={hamburger} className="h1 w1 db" />

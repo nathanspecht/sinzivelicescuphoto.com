@@ -7,24 +7,23 @@ import Slides from '../components/Slides'
 
 export default class IndexPage extends React.Component {
   render() {
-    /*
     const { data } = this.props
-    // let { edges: photos } = data.allMarkdownRemark
+
     const projects = data.projects
 
-    photos = photos.map(({ node: photo }) => ({
-      photo: {
-        id: photo.id,
-        src: photo.frontmatter.image,
-      },
-    }))
-    */
+    const index = data.index.edges[0].node
+
+    const featuredProject = projects.edges.find(
+      ({ node: project }) =>
+        project.frontmatter.title === index.frontmatter.featuredProject,
+    )
+
+    const images = featuredProject.node.frontmatter.images
 
     return (
       <Layout projects={projects}>
-        <Section className="mt4">
-          <div>Hello</div>
-          {/*<Slides photos={photos} />*/}
+        <Section className="flex flex-auto mt4">
+          <Slides images={images} />
         </Section>
       </Layout>
     )
@@ -39,7 +38,6 @@ IndexPage.propTypes = {
   }),
 }
 
-/*
 export const pageQuery = graphql`
   query IndexQuery {
     projects: allMarkdownRemark(
@@ -52,19 +50,16 @@ export const pageQuery = graphql`
       }
     }
 
-    allMarkdownRemark {
+    index: allMarkdownRemark(
+      filter: { frontmatter: { templateKey: { eq: "index" } } }
+    ) {
       edges {
         node {
-          id
-          fields {
-            slug
-          }
           frontmatter {
-            title
+            featuredProject
           }
         }
       }
     }
   }
 `
-*/
