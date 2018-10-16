@@ -17,7 +17,7 @@ export const AboutPageTemplate = ({
   return (
     <Section className="mw8">
       <Title>{title}</Title>
-      <div className="flex flex-column flex-row-l pv5">
+      <div className="flex flex-column flex-row-l pv2">
         <div className="w-50-l pr4-l">
           <div>
             <PageContent content={content} />

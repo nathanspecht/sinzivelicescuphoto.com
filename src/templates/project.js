@@ -9,7 +9,7 @@ const Project = ({ data }) => {
 
   return (
     <Layout projects={projects}>
-      <Section className="mt4">
+      <Section className="flex flex-auto mt4">
         <Slides images={images} />
       </Section>
     </Layout>

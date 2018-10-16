@@ -26,7 +26,7 @@ class Slides extends React.Component {
     const image = images[this.state.index]
 
     return (
-      <div className="relative w-100">
+      <div className="relative w-100 flex-auto">
         <TransitionGroup>
           <CSSTransition key={image} timeout={100} classNames="fade">
             <img className="db center" src={image} />
