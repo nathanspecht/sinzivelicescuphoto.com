@@ -29,7 +29,7 @@ class Navbar extends React.Component {
           if (!matches && !this.state.small) this.setSmall()
 
           return (
-            <nav className="flex pv1 pv3-l ph2 ph4-ns ph5-l justify-between items-center">
+            <nav className="flex pv1 pv3-l ph2 ph4-ns ph5-l justify-between items-center shrink-0">
               <div>
                 <Link className="b f5 f4-m f3-l futura-bold" to="/" noUnderline>
                   SINZIANA VELICESCU
