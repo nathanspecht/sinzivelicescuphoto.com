@@ -39,7 +39,7 @@ IndexPage.propTypes = {
 }
 
 export const pageQuery = graphql`
-  query IndexQuery {
+  query IndexQuery2 {
     projects: allMarkdownRemark(
       filter: { frontmatter: { templateKey: { eq: "project" } } }
     ) {
