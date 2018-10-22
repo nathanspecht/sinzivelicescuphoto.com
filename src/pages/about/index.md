@@ -1,14 +1,10 @@
 ---
 templateKey: about-page
 title: ABOUT
-image: 'https://ucarecdn.com/abd4ea74-5dde-482c-8848-5d87c261bf91/'
+image: 'https://ucarecdn.com/b3291334-f866-4a7e-a995-9b2114f2244f/'
 ---
-Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species.
+Sinziana Velicescu is a photographer and filmmaker based in Los Angeles, California. She is a graduate of the University of Southern California with a B.A. in Comparative Literature and Film.
 
-Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from a single country. The name of the coffee is then usually the place it was grown to whatever degree available.
+Her photography explores human intervention with nature in landscapes that have undergone political, social, or environmental change. Appropriating architectural vocabulary, Velicescu disrupts everyday topography via careful composition to develop an elegant and humorous narrative to tell the story of place.
 
-Sustainable agriculture is farming in sustainable ways based on an understanding of ecosystem services, the study of relationships between organisms and their environment. What grows where and how it is grown are a matter of choice and careful consideration for nature and communities.
-
-Direct trade is a form of sourcing practiced by some coffee roasters. Advocates of direct trade practices promote direct communication and price negotiation between buyer and farmer, along with systems that encourage and incentivize quality.
-
-We want to truly empower the communities that bring amazing coffee to you. That’s why we reinvest 20% of our profits into farms, local businesses and schools everywhere our coffee is grown. You can see the communities grow and learn more about coffee farming on our blog.
+Velicescu's award winning series, “On The Periphery,” has been shown in galleries internationally and is now available as a hardcover book, published by Aint-Bad.
