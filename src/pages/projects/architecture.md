@@ -1,6 +1,6 @@
 ---
 templateKey: project
-title: Architecture
+title: Details
 images:
   - 'https://ucarecdn.com/5f7d0a0a-dd4c-468f-b97d-291eb20bee6b~43/nth/0/'
   - 'https://ucarecdn.com/5f7d0a0a-dd4c-468f-b97d-291eb20bee6b~43/nth/1/'
