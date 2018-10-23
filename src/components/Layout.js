@@ -6,7 +6,7 @@ import './all.css'
 import Navbar from '../components/Navbar'
 
 const TemplateWrapper = ({ projects, children }) => (
-  <div className="mw9 ma3 flex flex-column vh-100 relative">
+  <div className="mw9 center px3 pt3 flex flex-column vh-100 relative">
     <Helmet title="Sinziana Velicescu Photography" />
     <Navbar projects={projects} />
     <div className="f6 flex-auto flex flex-column">{children}</div>

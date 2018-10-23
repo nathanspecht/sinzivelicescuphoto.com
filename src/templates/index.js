@@ -8,6 +8,7 @@ import Slides from '../components/Slides'
 export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props
+    console.log(this.props)
 
     const projects = data.projects
 

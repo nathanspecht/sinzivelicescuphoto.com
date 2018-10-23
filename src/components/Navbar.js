@@ -29,14 +29,14 @@ class Navbar extends React.Component {
           if (!matches && !this.state.small) this.setSmall()
 
           return (
-            <nav className="flex pv1 pv3-l ph2 ph4-ns ph5-l justify-between items-center shrink-0">
+            <nav className="flex pt1 pt3-l ph2 ph4-ns ph5-l justify-between items-center shrink-0">
               <div>
                 <Link className="b f5 f4-m f3-l futura-bold" to="/" noUnderline>
                   SINZIANA VELICESCU
                 </Link>
               </div>
               <div
-                className="absolute pv1 ph2 ph4-ns top-0 right-0 z-2 db dn-l pointer"
+                className="absolute pv3 ph2 ph4-ns top-0 right-0 z-2 db dn-l pointer"
                 onClick={this.toggle}
               >
                 <img src={hamburger} className="h1 w1 db" />
