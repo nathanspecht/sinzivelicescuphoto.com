@@ -23,7 +23,7 @@ export default class IndexPage extends React.Component {
 
     return (
       <Layout projects={projects}>
-        <Section className="flex flex-auto mt4">
+        <Section className="flex flex-auto mv4">
           <Slides images={images} />
         </Section>
       </Layout>

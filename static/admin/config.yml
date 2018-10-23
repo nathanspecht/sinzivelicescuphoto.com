@@ -26,6 +26,9 @@ collections:
             searchFields: ["title"]
             valueField: "title"
             displayField: ["title"]
+          - {label: "Facebook Link", name: "facebook", widget: "string"}
+          - {label: "Instagram Link", name: "instagram", widget: "string"}
+          - {label: "Email Link", name: "email", widget: "string"}
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
