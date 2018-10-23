@@ -1,8 +1,8 @@
 ---
 templateKey: index
-featuredProject: On the Periphery
-facebook: google.com
-instagram: google.com
-email: google.com
+featuredProject: Architecture
+facebook: 'https://google.com'
+instagram: 'https://google.com'
+email: 'https://google.com'
 ---
 
