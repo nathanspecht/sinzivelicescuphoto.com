@@ -1,8 +1,8 @@
 ---
 templateKey: index
-featuredProject: Architecture
-facebook: 'https://google.com'
-instagram: 'https://google.com'
-email: 'https://google.com'
+featuredProject: Details
+facebook: 'https://www.facebook.com/sinzianavelicescu'
+instagram: 'https://www.instagram.com/casualtimetravel'
+email: 'mailto:casualtimetravel@gmail.com'
 ---
 
