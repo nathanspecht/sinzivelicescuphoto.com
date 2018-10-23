@@ -71,12 +71,8 @@ class Slides extends React.Component {
 }
 
 function preload(url) {
-  console.log('Preloading: ', url)
   const image = new Image()
   image.src = url
-  image.onload = () => {
-    console.log('Preloaded: ')
-  }
 }
 
 export default Slides

@@ -5,8 +5,9 @@ import Title from '../components/Title'
 
 const NotFoundPage = ({ data }) => {
   const projects = data.projects
+  const links = data.links
   return (
-    <Layout projects={data.projects}>
+    <Layout links={links} projects={data.projects}>
       <Section>
         <Title>404</Title>
       </Section>
@@ -22,6 +23,20 @@ export const pageQuery = graphql`
       edges {
         node {
           ...ProjectFragment
+        }
+      }
+    }
+
+    links: allMarkdownRemark(
+      filter: { frontmatter: { templateKey: { eq: "index" } } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            facebook
+            instagram
+            email
+          }
         }
       }
     }

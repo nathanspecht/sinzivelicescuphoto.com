@@ -25,8 +25,6 @@ class Navbar extends React.Component {
 
     const links = this.props.links.edges[0].node.frontmatter
 
-    console.log({ links })
-
     return (
       <MediaQuery minWidth="60em">
         {matches => {
@@ -74,15 +72,15 @@ class Navbar extends React.Component {
                   About
                 </Link>
                 <div className="flex mv2 mv0-l">
-                  <Link to={links.facebook} className="mr3" activeClassName="">
+                  <a className="link dim black mr3" href={links.facebook}>
                     <Facebook />
-                  </Link>
-                  <Link to={links.instagram} className="mr3" activeClassName="">
+                  </a>
+                  <a className="link dim black mr3" href={links.instagram}>
                     <Instagram />
-                  </Link>
-                  <Link to={links.email} activeClassName="">
+                  </a>
+                  <a className="link dim black mr3" href={links.email}>
                     <Envelope />
-                  </Link>
+                  </a>
                 </div>
               </div>
             </nav>
