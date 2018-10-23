@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-starter-netlify-cms",
+  "name": "sinzi-velicescu-photography",
   "description": "Sinzi Velicescu Photography",
   "version": "0.0.1",
   "author": "Nathan Specht",
@@ -31,9 +31,7 @@
     "tachyons": "4.10.0",
     "uuid": "^3.2.1"
   },
-  "keywords": [
-    "gatsby"
-  ],
+  "keywords": ["gatsby"],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
