@@ -1,8 +1,8 @@
 import React from 'react'
 import { FontAwesomeIcon as FA } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faEnvelope } from '@fortawesome/pro-light-svg-icons'
 import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '../icons/faEnvelope'
 
 library.add(faEnvelope)
 library.add(faFacebook)
