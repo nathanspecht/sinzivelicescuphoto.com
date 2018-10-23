@@ -1,16 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
-import Layout, { projectsFragment } from '../components/Layout'
+import Layout, { projectsFragment, linksFragment } from '../components/Layout'
 import Section from '../components/Section'
 import Slides from '../components/Slides'
 
 export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props
-    console.log(this.props)
 
     const projects = data.projects
+
+    const links = data.links
+
+    console.log({ links })
 
     const index = data.index.edges[0].node
 
@@ -22,7 +25,7 @@ export default class IndexPage extends React.Component {
     const images = featuredProject.node.frontmatter.images
 
     return (
-      <Layout projects={projects}>
+      <Layout projects={projects} links={links}>
         <Section className="flex flex-auto mv4">
           <Slides images={images} />
         </Section>
@@ -58,6 +61,20 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             featuredProject
+          }
+        }
+      }
+    }
+
+    links: allMarkdownRemark(
+      filter: { frontmatter: { templateKey: { eq: "index" } } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            facebook
+            instagram
+            email
           }
         }
       }

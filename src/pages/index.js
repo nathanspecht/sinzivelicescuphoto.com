@@ -1,5 +1,5 @@
 import React from 'react'
-import IndexPage, { pageQuery as pQ } from '../templates/index'
+import IndexPage from '../templates/index'
 
 export default IndexPage
 
@@ -22,6 +22,20 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             featuredProject
+          }
+        }
+      }
+    }
+
+    links: allMarkdownRemark(
+      filter: { frontmatter: { templateKey: { eq: "index" } } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            facebook
+            instagram
+            email
           }
         }
       }

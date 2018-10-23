@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import Layout, { projectsFragment } from '../components/Layout'
+import Layout, { projectsFragment, linksFragment } from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import Section from '../components/Section'
 import Title from '../components/Title'
@@ -41,10 +41,10 @@ AboutPageTemplate.propTypes = {
 }
 
 const AboutPage = ({ data }) => {
-  const { projects, markdownRemark: post } = data
+  const { projects, links, markdownRemark: post } = data
 
   return (
-    <Layout projects={projects}>
+    <Layout projects={projects} links={links}>
       <AboutPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
@@ -78,6 +78,20 @@ export const aboutPageQuery = graphql`
       frontmatter {
         title
         image
+      }
+    }
+
+    links: allMarkdownRemark(
+      filter: { frontmatter: { templateKey: { eq: "index" } } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            facebook
+            instagram
+            email
+          }
+        }
       }
     }
   }
