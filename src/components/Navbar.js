@@ -5,6 +5,7 @@ import facebook from '../img/facebook-icon.svg'
 import instagram from '../img/instagram-icon.svg'
 import tumblr from '../img/tumblr-icon.svg'
 import hamburger from '../img/hamburger-icon.svg'
+import { Facebook, Instagram, Envelope } from './Icons'
 
 class Navbar extends React.Component {
   state = {
@@ -74,13 +75,13 @@ class Navbar extends React.Component {
                 </Link>
                 <div className="flex mv2 mv0-l">
                   <Link to={links.facebook} className="mr3" activeClassName="">
-                    <img src={facebook} className="h1 w1 db" />
+                    <Facebook />
                   </Link>
                   <Link to={links.instagram} className="mr3" activeClassName="">
-                    <img src={instagram} className="h1 w1 db" />
+                    <Instagram />
                   </Link>
                   <Link to={links.email} activeClassName="">
-                    <img src={tumblr} className="h1 w1 db" />
+                    <Envelope />
                   </Link>
                 </div>
               </div>

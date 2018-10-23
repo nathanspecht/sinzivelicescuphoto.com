@@ -13,8 +13,6 @@ export default class IndexPage extends React.Component {
 
     const links = data.links
 
-    console.log({ links })
-
     const index = data.index.edges[0].node
 
     const featuredProject = projects.edges.find(
