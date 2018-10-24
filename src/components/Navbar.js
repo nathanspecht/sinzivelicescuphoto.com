@@ -1,11 +1,7 @@
 import React from 'react'
 import MediaQuery from 'react-responsive'
 import Link from './Link'
-import facebook from '../img/facebook-icon.svg'
-import instagram from '../img/instagram-icon.svg'
-import tumblr from '../img/tumblr-icon.svg'
-import hamburger from '../img/hamburger-icon.svg'
-import { Facebook, Instagram, Envelope } from './Icons'
+import { Facebook, Instagram, Envelope, Bars } from './Icons'
 
 class Navbar extends React.Component {
   state = {
@@ -33,17 +29,17 @@ class Navbar extends React.Component {
           if (!matches && !this.state.small) this.setSmall()
 
           return (
-            <nav className="flex pt1 pt3-l ph2 ph4-ns ph5-l justify-between items-center shrink-0">
+            <nav className="flex pt1 pt3-l ph3 ph4-ns ph5-l justify-between items-center shrink-0">
               <div>
                 <Link className="b f5 f4-m f3-l futura-bold" to="/" noUnderline>
                   SINZIANA VELICESCU
                 </Link>
               </div>
               <div
-                className="absolute pv3 ph2 ph4-ns top-0 right-0 z-2 db dn-l pointer"
+                className="absolute pv3 mt1 ph3 ph4-ns top-0 right-0 z-2 db dn-l pointer"
                 onClick={this.toggle}
               >
-                <img src={hamburger} className="h1 w1 db" />
+                <Bars />
               </div>
               <div
                 className={`

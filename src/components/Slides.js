@@ -50,7 +50,7 @@ class Slides extends React.Component {
               className="flex flex-auto absolute top-0 left-0 right-0 h-100"
               style={{
                 backgroundImage: `url(${image})`,
-                backgroundPosition: 'center',
+                backgroundPosition: 'center top',
                 backgroundSize: 'contain',
                 backgroundRepeat: 'no-repeat',
               }}

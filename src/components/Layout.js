@@ -5,7 +5,7 @@ import './all.css'
 
 import Navbar from '../components/Navbar'
 
-const TemplateWrapper = ({ projects, links, children }) => (
+const Layout = ({ projects, links, children }) => (
   <div className="mw9 center px3 pt3 flex flex-column vh-100 relative">
     <Helmet title="Sinziana Velicescu Photography" />
     <Navbar projects={projects} links={links} />
@@ -36,4 +36,4 @@ export const linksFragment = graphql`
   }
 `
 
-export default TemplateWrapper
+export default Layout
