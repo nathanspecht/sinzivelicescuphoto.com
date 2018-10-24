@@ -16,10 +16,10 @@ export const AboutPageTemplate = ({
 
   return (
     <Section className="mw8 center">
-      <div className="flex flex-column flex-row-l pv5">
+      <div className="flex flex-column flex-row-l pv0 pv5-l">
         <div className="w-50-l pr4-l">
           <Title>{title}</Title>
-          <div className="mt5">
+          <div className="mt1 mt5-l">
             <PageContent content={content} />
           </div>
         </div>
