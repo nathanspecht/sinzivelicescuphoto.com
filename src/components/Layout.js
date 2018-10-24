@@ -7,7 +7,16 @@ import Navbar from '../components/Navbar'
 
 const Layout = ({ projects, links, children }) => (
   <div className="mw9 center px3 pt3 flex flex-column vh-100 relative">
-    <Helmet title="Sinziana Velicescu Photography" />
+    <Helmet title="Sinziana Velicescu Photography">
+      <meta
+        name="keywords"
+        content={links.edges[0].node.frontmatter.keywords}
+      />
+      <meta
+        name="description"
+        content={links.edges[0].node.frontmatter.description}
+      />
+    </Helmet>
     <Navbar projects={projects} links={links} />
     <div className="f6 flex-auto flex flex-column">{children}</div>
   </div>
@@ -32,6 +41,8 @@ export const linksFragment = graphql`
       facebook
       instagram
       email
+      description
+      keywords
     }
   }
 `

@@ -88,6 +88,8 @@ export const aboutPageQuery = graphql`
             facebook
             instagram
             email
+            keywords
+            description
           }
         }
       }

@@ -48,6 +48,8 @@ export const projectQuery = graphql`
             facebook
             instagram
             email
+            keywords
+            description
           }
         }
       }

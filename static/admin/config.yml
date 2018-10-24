@@ -29,6 +29,8 @@ collections:
           - {label: "Facebook Link", name: "facebook", widget: "string"}
           - {label: "Instagram Link", name: "instagram", widget: "string"}
           - {label: "Email Link", name: "email", widget: "string"}
+          - {label: "Keywords (comma separated)", name: "keywords", widget: "string"}
+          - {label: "Description", name: "description", widget: "string"}
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
