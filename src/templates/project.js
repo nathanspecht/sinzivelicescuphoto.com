@@ -3,15 +3,19 @@ import Layout, { projectsFragment } from '../components/Layout'
 import Section from '../components/Section'
 import Slides from '../components/Slides'
 
+export const ProjectPageTemplate = ({ images }) => (
+  <Section className="flex flex-auto mv4">
+    <Slides images={images} />
+  </Section>
+)
+
 const Project = ({ data }) => {
   const { projects, markdownRemark: project, links } = data
   let { images } = project.frontmatter
 
   return (
     <Layout projects={projects} links={links}>
-      <Section className="flex flex-auto mv4">
-        <Slides images={images} />
-      </Section>
+      <ProjectPageTemplate images={images} />
     </Layout>
   )
 }
