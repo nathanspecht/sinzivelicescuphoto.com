@@ -1,7 +1,7 @@
 ---
 templateKey: about-page
 title: ABOUT
-image: 'https://ucarecdn.com/b3291334-f866-4a7e-a995-9b2114f2244f/'
+image: 'https://ucarecdn.com/9ce08a5f-7d60-46c4-9ff0-2345ad6056fe/'
 ---
 Sinziana Velicescu is an architectural photographer based in Los Angeles, CA and is available for projects worldwide. 
 
