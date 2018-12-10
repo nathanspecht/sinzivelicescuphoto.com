@@ -6,7 +6,15 @@ import './all.css'
 import Navbar from '../components/Navbar'
 
 const Layout = ({ projects, links, children }) => (
-  <div className="mw9 center px3 pt3 flex flex-column vh-100 relative">
+  <div
+    className="mw9 center px3 pt3 flex flex-column vh-100 relative"
+    style={{
+      overflowX: 'hidden',
+      overflowY: 'scroll',
+      overflowScrolling: 'touch',
+      WebkitOverflowScrolling: 'touch',
+    }}
+  >
     <Helmet title="Sinziana Velicescu Photography">
       <meta
         name="keywords"
