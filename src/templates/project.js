@@ -1,13 +1,26 @@
+import { cold } from 'react-hot-loader'
 import React from 'react'
 import Layout, { projectsFragment } from '../components/Layout'
 import Section from '../components/Section'
 import Slides from '../components/Slides'
+import { Images } from '../components/Images'
+import { useMedia } from '../hooks/useMedia'
 
-export const ProjectPageTemplate = ({ images }) => (
-  <Section className="flex flex-auto mv4">
-    <Slides images={images} />
-  </Section>
-)
+function _ProjectPageTemplate({ images }) {
+  const isWide = useMedia('(min-width: 60em)', true)
+
+  return isWide ? (
+    <Section className="flex flex-auto mv4">
+      <Slides images={images} />
+    </Section>
+  ) : (
+    <Section className="mv4">
+      <Images images={images} />
+    </Section>
+  )
+}
+
+export const ProjectPageTemplate = cold(_ProjectPageTemplate)
 
 const Project = ({ data }) => {
   const { projects, markdownRemark: project, links } = data
@@ -20,7 +33,7 @@ const Project = ({ data }) => {
   )
 }
 
-export default Project
+export default cold(Project)
 
 export const projectQuery = graphql`
   query ProjectById($id: String!) {

@@ -1,36 +1,44 @@
+import { cold } from 'react-hot-loader'
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
+import { useMedia } from '../hooks/useMedia'
 import Layout, { projectsFragment, linksFragment } from '../components/Layout'
 import Section from '../components/Section'
 import Slides from '../components/Slides'
+import { Images } from '../components/Images'
 
-export default class IndexPage extends React.Component {
-  render() {
-    const { data } = this.props
+function IndexPage({ data }) {
+  const isWide = useMedia('(min-width: 60em)', true)
+  const projects = data.projects
 
-    const projects = data.projects
+  const links = data.links
 
-    const links = data.links
+  const index = data.index.edges[0].node
 
-    const index = data.index.edges[0].node
+  const featuredProject = projects.edges.find(
+    ({ node: project }) =>
+      project.frontmatter.title === index.frontmatter.featuredProject,
+  )
 
-    const featuredProject = projects.edges.find(
-      ({ node: project }) =>
-        project.frontmatter.title === index.frontmatter.featuredProject,
-    )
+  const images = featuredProject.node.frontmatter.images
 
-    const images = featuredProject.node.frontmatter.images
-
-    return (
-      <Layout projects={projects} links={links}>
+  return (
+    <Layout projects={projects} links={links}>
+      {isWide ? (
         <Section className="flex flex-auto mv4">
           <Slides images={images} />
         </Section>
-      </Layout>
-    )
-  }
+      ) : (
+        <Section className="mv4">
+          <Images images={images} />
+        </Section>
+      )}
+    </Layout>
+  )
 }
+
+export default cold(IndexPage)
 
 IndexPage.propTypes = {
   data: PropTypes.shape({

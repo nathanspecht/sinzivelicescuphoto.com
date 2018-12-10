@@ -23,15 +23,18 @@
     "node-sass": "^4.9.2",
     "parcel-bundler": "^1.9.4",
     "prop-types": "^15.6.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.4.1",
+    "react": "^16.7.0-alpha.2",
+    "react-dom": "^16.7.0-alpha.2",
     "react-helmet": "^5.2.0",
+    "react-hot-loader": "4.5.2",
     "react-responsive": "^5.0.0",
     "react-transition-group": "^2.5.0",
     "tachyons": "4.10.0",
     "uuid": "^3.2.1"
   },
-  "keywords": ["gatsby"],
+  "keywords": [
+    "gatsby"
+  ],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
