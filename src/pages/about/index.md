@@ -9,8 +9,8 @@ Velicescu brings a unique perspective to the world of architecture photography g
 
 Velicescu's award winning series, “On The Periphery,” has been shown in galleries internationally and is now available as a hardcover book, published by Aint-Bad.
 
-**Recent Press: **Wired, The Guardian, Los Angeles Times, Juxtapoz, The Daily Beast, iGNANT, Fubiz, CNN Style, Archinect, Booooooom, Icon Magazine
+**Recent Press:** Wired, The Guardian, Los Angeles Times, Juxtapoz, The Daily Beast, iGNANT, Fubiz, CNN Style, Archinect, Booooooom, Icon Magazine
 
-**Recent Clients: **Adobe, Samsung, Volvo, Swatch, Maison Margiela, BCBG Max Azria, Ember Technologies, Shildan, IHG, StandardVision, Palm Springs Art Museum
+**Recent Clients:** Adobe, Samsung, Volvo, Swatch, Maison Margiela, BCBG Max Azria, Ember Technologies, Shildan, IHG, StandardVision, Palm Springs Art Museum
 
-**For bookings, quotes, and additional inquiries, please email me at**: casualtimetravel@gmail.com
+**For bookings, quotes, and additional inquiries, please email me at: **casualtimetravel@gmail.com
