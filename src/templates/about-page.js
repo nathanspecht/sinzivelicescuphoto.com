@@ -23,7 +23,7 @@ export const AboutPageTemplate = ({
             <PageContent content={content} />
           </div>
         </div>
-        <div className="w-50-l flex flex-column justify-start">
+        <div className="w-50-l flex flex-column justify-center">
           <img className="w-100 db" src={image} />
         </div>
       </div>
