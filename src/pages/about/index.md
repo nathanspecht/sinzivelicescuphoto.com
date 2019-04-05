@@ -17,4 +17,4 @@ Velicescu's award winning series, “On The Periphery,” has been shown in gall
 
 
 
-**For bookings, quotes, and additional inquiries, please email me at: **casualtimetravel@gmail.com
+**For bookings, quotes, and additional inquiries, please email me at: ** casualtimetravel@gmail.com
