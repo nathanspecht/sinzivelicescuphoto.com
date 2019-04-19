@@ -1,6 +1,7 @@
 ---
 templateKey: project
 title: Exteriors
+sortKey: 1
 images:
   - 'https://ucarecdn.com/e983822c-d866-4194-98fe-5f22a3b1c528~20/nth/0/'
   - 'https://ucarecdn.com/e983822c-d866-4194-98fe-5f22a3b1c528~20/nth/1/'
