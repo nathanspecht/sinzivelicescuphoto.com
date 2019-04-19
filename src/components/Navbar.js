@@ -25,11 +25,15 @@ function Navbar(props) {
   React.useEffect(
     () => {
       const removeScroll = () => {
-        props.layoutRef.current.style.overflowY = 'hidden'
+        if (props.layoutRef.current) {
+          props.layoutRef.current.style.overflowY = 'hidden'
+        }
       }
 
       const addScroll = () => {
-        props.layoutRef.current.style.overflowY = 'scroll'
+        if (props.layoutRef.current) {
+          props.layoutRef.current.style.overflowY = 'scroll'
+        }
       }
 
       if (open) {
