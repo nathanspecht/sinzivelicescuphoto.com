@@ -52,6 +52,7 @@ export const projectQuery = graphql`
       html
       frontmatter {
         title
+        sortKey
         images
       }
     }
