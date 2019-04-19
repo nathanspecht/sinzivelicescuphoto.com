@@ -1,6 +1,7 @@
 ---
 templateKey: project
 title: On the Periphery
+sortKey: 2
 images:
   - 'https://ucarecdn.com/f27f5067-7e8e-4510-a89e-3e5bae8b48b8~19/nth/0/'
   - 'https://ucarecdn.com/f27f5067-7e8e-4510-a89e-3e5bae8b48b8~19/nth/1/'
