@@ -1,6 +1,7 @@
 ---
 templateKey: project
 title: Details
+sortKey: 0
 images:
   - 'https://ucarecdn.com/16b18fce-92f8-4eae-904b-3fac52e1ccdd~26/nth/0/'
   - 'https://ucarecdn.com/16b18fce-92f8-4eae-904b-3fac52e1ccdd~26/nth/1/'
