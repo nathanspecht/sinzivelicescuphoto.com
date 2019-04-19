@@ -22,6 +22,31 @@ function Navbar(props) {
   if (isWide && small) setBig()
   if (!isWide && !small) setSmall()
 
+  React.useEffect(
+    () => {
+      const removeScroll = () => {
+        props.layoutRef.current.style.overflowY = 'hidden'
+      }
+
+      const addScroll = () => {
+        props.layoutRef.current.style.overflowY = 'scroll'
+      }
+
+      if (open) {
+        removeScroll()
+      } else {
+        addScroll()
+      }
+
+      return addScroll
+    },
+    [open],
+  )
+
+  const sortedProjects = projects.edges.sort(({ node: project }) => {
+    return project.frontmatter.sortKey
+  })
+
   return (
     <nav className="flex pt1 pt3-l ph3 ph4-ns ph5-l justify-between items-center shrink-0">
       <div>
@@ -48,7 +73,7 @@ function Navbar(props) {
           ${small ? 'transition-trans' : ''} 
         `}
       >
-        {projects.edges.map(({ node: project }) => (
+        {sortedProjects.map(({ node: project }) => (
           <Link
             key={project.id}
             className="mr0 mr3-l mv2 mv0-l"

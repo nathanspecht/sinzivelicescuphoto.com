@@ -54,6 +54,7 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "project"}
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Sort Key", name: "sortKey", widget: "number", default: 0}
       - label: "Images"
         name: "images"
         widget: "image"
